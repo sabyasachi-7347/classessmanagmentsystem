@@ -1,0 +1,121 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true" class="dark-theme">
+  <div class="login-container">
+    <!-- Header -->
+    <div class="header-content">
+      <h1>Welcome to ClassesApp</h1>
+      <p class="subtitle">Your Learning Journey Starts Here</p>
+    </div>
+
+    <!-- Main Login Form -->
+    <form [formGroup]="loginForm" *ngIf="!isForgotPassword" (ngSubmit)="login()" class="login-form">
+      <!-- Login Type Selector -->
+      <div class="login-type-selector">
+        <ion-segment [formControl]="segmentCtrl" mode="ios" class="custom-segment">
+          <ion-segment-button value="email">
+            <ion-label>Email</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="userid">
+            <ion-label>User ID</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="phone">
+            <ion-label>Phone</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+
+      <!-- Input Fields -->
+      <div class="form-inputs">
+        <!-- Email Login -->
+        <div *ngIf="loginType === 'email'">
+          <ion-item class="custom-input">
+            <ion-input type="email" formControlName="email" placeholder="Email"></ion-input>
+          </ion-item>
+          <ion-item class="custom-input">
+            <ion-input type="password" formControlName="password" placeholder="Password"></ion-input>
+          </ion-item>
+        </div>
+
+        <!-- User ID Login -->
+        <div *ngIf="loginType === 'userid'">
+          <ion-item class="custom-input">
+            <ion-input type="text" formControlName="userid" placeholder="User ID"></ion-input>
+          </ion-item>
+          <ion-item class="custom-input">
+            <ion-input type="password" formControlName="password" placeholder="Password"></ion-input>
+          </ion-item>
+        </div>
+
+        <!-- Phone Login -->
+        <div *ngIf="loginType === 'phone'">
+          <ion-item class="custom-input">
+            <ion-input type="tel" formControlName="phone" placeholder="Phone Number"></ion-input>
+          </ion-item>
+
+          <ion-button type="button" expand="block" (click)="sendOtp()" [disabled]="!loginForm.get('phone')?.valid" class="otp-button">
+            {{ isOtpSent ? 'Resend OTP' : 'Send OTP' }}
+          </ion-button>
+
+          <div *ngIf="isOtpSent" class="otp-verification">
+            <ion-item class="custom-input">
+              <ion-input type="number" formControlName="otp" placeholder="Enter OTP"></ion-input>
+            </ion-item>
+            <ion-button expand="block" type="button" class="verify-button" (click)="verifyOtp()" [disabled]="!loginForm.get('otp')?.valid">
+              Verify OTP
+            </ion-button>
+          </div>
+        </div>
+
+        <!-- Login Button - Show only for email and userid -->
+        <ion-button *ngIf="loginType !== 'phone'" expand="block" type="submit" class="login-button" [disabled]="!loginForm.valid">
+          Login to Your Account
+        </ion-button>
+
+        <!-- Forgot Password Link -->
+        <div class="forgot-password">
+          <a (click)="forgotPassword()">Forgot Password?</a>
+        </div>
+      </div>
+    </form>
+
+    <!-- Forgot Password Form -->
+    <form [formGroup]="loginForm" *ngIf="isForgotPassword" (ngSubmit)="resetPassword()" class="forgot-form">
+      <h2>Reset Password</h2>
+      <ion-item class="custom-input">
+        <ion-input type="text" formControlName="email" placeholder="Email or Phone Number"></ion-input>
+      </ion-item>
+      <div class="button-group">
+        <ion-button expand="block" type="submit" class="reset-button">
+          Reset Password
+        </ion-button>
+        <ion-button expand="block" fill="clear" (click)="cancelForgotPassword()" class="cancel-button">
+          Back to Login
+        </ion-button>
+      </div>
+    </form>
+
+    <!-- Bottom Actions -->
+    <div class="bottom-actions">
+      <div class="action-button">
+        <ion-button fill="clear" (click)="submitEnquiry('enquiry')">
+          COURSE ENQUIRY
+        </ion-button>
+      </div>
+      <div class="action-button">
+        <ion-button fill="clear" (click)="submitEnquiry('contact')">
+          CONTACT SUPPORT
+        </ion-button>
+      </div>
+      <div class="action-button">
+        <ion-button fill="clear" (click)="submitEnquiry('callback')">
+          SCHEDULE DEMO
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>

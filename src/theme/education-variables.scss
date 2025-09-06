@@ -1,0 +1,108 @@
+// Education Theme Variables
+:root {
+  // Primary Colors - Trustworthy Blue Shades
+  --ion-color-primary: #1e88e5;
+  --ion-color-primary-rgb: 30, 136, 229;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #1a78c9;
+  --ion-color-primary-tint: #3594e7;
+
+  // Secondary Colors - Warm Orange for Calls-to-Action
+  --ion-color-secondary: #ff6d00;
+  --ion-color-secondary-rgb: 255, 109, 0;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #e06000;
+  --ion-color-secondary-tint: #ff7c1a;
+
+  // Success Colors - Positive Green
+  --ion-color-success: #2e7d32;
+  --ion-color-success-rgb: 46, 125, 50;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #286e2c;
+  --ion-color-success-tint: #438a47;
+
+  // Warning Colors - Attention Yellow
+  --ion-color-warning: #fdd835;
+  --ion-color-warning-rgb: 253, 216, 53;
+  --ion-color-warning-contrast: #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade: #dfbe2f;
+  --ion-color-warning-tint: #fddc49;
+
+  // Danger Colors - Alert Red
+  --ion-color-danger: #d32f2f;
+  --ion-color-danger-rgb: 211, 47, 47;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #ba2929;
+  --ion-color-danger-tint: #d74444;
+
+  // Light Colors - Background
+  --ion-color-light: #f5f5f5;
+  --ion-color-light-rgb: 245, 245, 245;
+  --ion-color-light-contrast: #000000;
+  --ion-color-light-contrast-rgb: 0, 0, 0;
+  --ion-color-light-shade: #d8d8d8;
+  --ion-color-light-tint: #f6f6f6;
+
+  // Medium Colors - UI Elements
+  --ion-color-medium: #757575;
+  --ion-color-medium-rgb: 117, 117, 117;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #676767;
+  --ion-color-medium-tint: #838383;
+
+  // Dark Colors - Text
+  --ion-color-dark: #212121;
+  --ion-color-dark-rgb: 33, 33, 33;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #1d1d1d;
+  --ion-color-dark-tint: #373737;
+
+  // Custom Educational Theme Variables
+  --edu-background-color: #ffffff;
+  --edu-surface-color: #f8f9fa;
+  --edu-text-primary: #212121;
+  --edu-text-secondary: #757575;
+  --edu-accent-color: #ff6d00;
+  --edu-success-light: #e8f5e9;
+  --edu-warning-light: #fff3e0;
+  --edu-error-light: #ffebee;
+  
+  // Typography
+  --edu-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  --edu-heading-weight: 600;
+  --edu-body-weight: 400;
+
+  // Spacing
+  --edu-spacing-xs: 4px;
+  --edu-spacing-sm: 8px;
+  --edu-spacing-md: 16px;
+  --edu-spacing-lg: 24px;
+  --edu-spacing-xl: 32px;
+
+  // Borders
+  --edu-border-radius-sm: 4px;
+  --edu-border-radius-md: 8px;
+  --edu-border-radius-lg: 16px;
+
+  // Shadows
+  --edu-shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --edu-shadow-md: 0 4px 8px rgba(0,0,0,0.12);
+  --edu-shadow-lg: 0 8px 16px rgba(0,0,0,0.14);
+
+  // Input Field Variables
+  --input-bg-gradient: linear-gradient(120deg, rgba(30, 64, 175, 0.15) 0%, rgba(30, 58, 138, 0.1) 50%, rgba(23, 37, 84, 0.05) 100%);
+  --input-border-color: rgba(59, 130, 246, 0.2);
+  --input-focus-border: rgba(59, 130, 246, 0.6);
+  --input-hover-bg: rgba(30, 58, 138, 0.2);
+  --input-focus-bg: rgba(30, 58, 138, 0.25);
+  --input-text-color: #e2e8f0;
+  --input-placeholder-color: rgba(148, 163, 184, 0.7);
+  --input-focus-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
